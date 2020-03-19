@@ -1,0 +1,30 @@
+@import '../styles/config';
+
+@keyframes grow {
+    0% {
+        transform: scale(0.33) rotate(-66deg); 
+        opacity: 0.5;
+    }
+    
+    100% {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+}
+.card-container {
+    perspective: 1000px;
+}
+.card {
+    animation: 0.33s cubic-bezier(1, 0.02, 0.41, 1.5) 0s 1 grow;
+    width: 100%;
+    max-width: 520px;
+    border: 1px solid $border-color;
+    
+    padding: calc(4 * #{$grid-unit}) 0;
+    background-color: rgba($off-white, 0.95);
+
+    @include MQ(md) {
+        margin: 0 auto;
+        border-radius: 6px;
+    }
+}

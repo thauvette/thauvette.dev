@@ -1,0 +1,9 @@
+@import '../styles/config';
+
+.about-page {
+    padding: 0 gridMultiplier(4);
+
+    p:not(:last-child) {
+        margin-bottom: gridMultiplier(2);
+    }
+}

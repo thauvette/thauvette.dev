@@ -1,0 +1,44 @@
+@import './variables';
+
+body {
+    color: $dark-primary;
+}
+
+// BUTTONS 
+button, .btn {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid $dark-primary;
+    cursor: pointer;
+    
+    &.btn-primary {
+        background-color: $dark-primary;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: gridMultiplier(1) gridMultiplier(4);
+
+        &:disabled {
+            opacity: 0.5;
+        }
+    }
+
+    &.btn-hollow {
+        border: none;
+        padding: 0;
+        color: $accent;
+    }
+
+}
+
+// FORMS AND INPUTS
+input, textarea {
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+    padding: gridMultiplier(1);
+    background-color: #fff;
+    ::placeholder {
+        opacity: 0.75;
+    }
+
+}

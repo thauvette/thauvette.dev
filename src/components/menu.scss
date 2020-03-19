@@ -1,0 +1,32 @@
+@import '../styles/config';
+
+.menu {
+    display: flex;
+    padding: gridMultiplier(6) 0 gridMultiplier(4);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .menu-button {
+        appearance: none;
+        border: 1px solid $white;
+        background-color: transparent;
+        cursor: pointer;
+        color: $white;
+        text-transform: uppercase;
+        padding: $grid-unit gridMultiplier(3);
+        font-size: 0.8rem;
+        letter-spacing: 2px;;
+        
+        &:not(:first-child) {
+            border-left: none;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba($accent, 0.8);
+        }
+    
+    }
+}
+

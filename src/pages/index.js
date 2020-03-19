@@ -1,21 +1,24 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, {useState} from "react"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import  Social from '../components/social'
+import routes from '../config/routes'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+import Views from '../views/views'
+import Menu from '../components/menu'
+import './index.scss'
+
+
+const IndexPage = () => {
+  const [currentView, setCurrentView] = useState(routes.home)
+  
+  return (
+    <Layout>
+      <Menu route={currentView} setView={setCurrentView}/>
+      <Views route={currentView} seoTitle={currentView} setView={setCurrentView}/>
+      <Social />
+    </Layout>
+  )
+}
 
 export default IndexPage

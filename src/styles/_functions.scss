@@ -1,0 +1,5 @@
+@import './variables';
+
+@function gridMultiplier($factor) {
+    @return $factor * $grid-unit
+}
