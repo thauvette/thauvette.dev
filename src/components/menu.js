@@ -1,19 +1,22 @@
 import React from 'react'
-import routes from '../config/routes'
+import {Link} from 'gatsby'
 import './menu.scss'
+import routes from '../config/routes'
+
 const Menu = props => {
     return (
         <div className="menu" role="navigation">
-            {Object.entries(routes).map(([routeId, routeName]) => {
+            {Object.values(routes).map(page => {
                 return (
-                    <button 
-                        key={routeId} 
-                        className="menu-button"
-                        onClick={() => props.setView(routeName)}
+                    <Link 
+                        to={page.link}
+                        key={page.link} 
+                        className="menu-link"
+                  
                     >
-                        {routeName}
-                    </button>
-                    )
+                        {page.text}
+                    </Link>
+                )
             })}
         </div>
     )

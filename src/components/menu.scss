@@ -7,13 +7,14 @@
     justify-content: center;
     position: relative;
 
-    .menu-button {
+    .menu-link {
         appearance: none;
         border: 1px solid $white;
         background-color: transparent;
         cursor: pointer;
         color: $white;
         text-transform: uppercase;
+        text-decoration: none;
         padding: $grid-unit gridMultiplier(3);
         font-size: 0.8rem;
         letter-spacing: 2px;;
