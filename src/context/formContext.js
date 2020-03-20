@@ -30,11 +30,16 @@ function FormProvider({children}) {
             validateEmail() &&
             validateMessage()
         ) {
-           
+            
+            const values = {
+                email: formValues.email.value,
+                message: formValues.message.value
+            }
+
             fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "Contact Form", ...formValues })
+                body: encode({ "form-name": "Contact Form", ...values })
               })
                 .then(() => setFormSubmissionState({loading: false, error: null, success: true}))
                 .catch(error => setFormSubmissionState({loading: false, error: 'Could not submit', success: false}))

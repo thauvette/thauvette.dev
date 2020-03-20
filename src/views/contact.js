@@ -28,10 +28,10 @@ const Contact = () => {
     if(formSubmissionState.error) {
         return (
             <div className="contact">
-            <h3>Sorry.</h3>
-            <p>Something went wrong. Please try to <a href="mailto:matt@thauvette.dev" >email me.</a> Or
-            <button onClick={resetFormSubmissionState} className="btn btn-hollow">Try Again</button>
-            </p>
+                <h3>Sorry.</h3>
+                <p>Something went wrong. Please try to <a href="mailto:matt@thauvette.dev" >email me.</a> Or
+                <button onClick={resetFormSubmissionState} className="btn btn-hollow">Try Again</button>
+                </p>
             </div>
         )
     }
