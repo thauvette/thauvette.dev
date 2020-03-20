@@ -39,7 +39,7 @@ const Contact = () => {
     return (
         <div className="contact">
             <h3>Get in touch</h3>
-            <form onSubmit={submitForm}>
+            <form onSubmit={submitForm} netlify netlify-honeypot="bot-field">
             <div
                 className={`input-container`}
             >

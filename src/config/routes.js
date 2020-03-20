@@ -1,5 +1,15 @@
 export default {
-    home: 'Matt',
-    about: 'About me',
-    contact: 'Contact'
+    home: {
+        text: 'Matt',
+        link: '/'
+    },
+    about: {
+        text: 'About me',
+        link: '/about'
+    },
+    contact: {
+        text: 'Contact',
+        link: '/contact'
+    }
 }
+

@@ -1,7 +1,9 @@
 import React from 'react';
-import './about.scss';
+import {Link} from 'gatsby';
 import routes from '../config/routes'
-const AboutPage = ({setView}) => {
+import './about.scss';
+
+const About = () => {
     return (
         <div className="about-page">
             <h3>
@@ -12,14 +14,15 @@ const AboutPage = ({setView}) => {
             </p>
             <p>
                 If you are interested in working on a project together,{' '} 
-                <button className="btn btn-hollow"
-                    onClick={() => setView(routes.contact)}
+                <Link
+                    className="btn btn-hollow"
+                   to={routes.contact.link}
                 >
                     please contact me.
-                </button>
+                </Link>
             </p>
         </div>
     )
 }
 
-export default AboutPage;
+export default About;
