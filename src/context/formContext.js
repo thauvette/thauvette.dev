@@ -34,10 +34,10 @@ function FormProvider({children}) {
             fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "contact", ...formValues })
+                body: encode({ "form-name": "Contact Form", ...formValues })
               })
-                .then(() => setFormSubmissionState({...formSubmissionState, loading: false, error: null, success: true}))
-                .catch(error => setFormSubmissionState({...formSubmissionState, loading: false, error: 'Could not submit', success: false}))
+                .then(() => setFormSubmissionState({loading: false, error: null, success: true}))
+                .catch(error => setFormSubmissionState({loading: false, error: 'Could not submit', success: false}))
         }
     }
 
