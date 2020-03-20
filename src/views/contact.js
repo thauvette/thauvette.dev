@@ -40,7 +40,6 @@ const Contact = () => {
         <div className="contact">
             <h3>Get in touch</h3>
             <form onSubmit={submitForm}>
-            <input type="hidden" name="form-name" value="Contact Form" />
             <div
                 className={`input-container`}
             >
