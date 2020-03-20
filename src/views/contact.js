@@ -39,7 +39,7 @@ const Contact = () => {
     return (
         <div className="contact">
             <h3>Get in touch</h3>
-            <form method={submitForm} name="Contact Form" method="POST" netlify>
+            <form method={submitForm} name="Contact Form" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="Contact Form" />
             <div
                 className={`input-container`}

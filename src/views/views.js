@@ -6,6 +6,7 @@ import AboutPage from './about'
 import Contact from './contact'
 import routes from '../config/routes'
 import {FormProvider} from '../context/formContext'
+import NetlifyForm from '../components/netlifyForm'
 
 function renderView(props) {
     switch(props.route) {
@@ -26,6 +27,8 @@ const Views = props => {
             <Card route={props.route}>
                 {renderView(props)}
             </Card>
+            {/* hidden form for netlify forms */}
+            <NetlifyForm />
         </FormProvider>
     )
 }
