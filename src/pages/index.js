@@ -6,8 +6,6 @@ import routes from '../config/routes'
 
 import Views from '../views/views'
 import Menu from '../components/menu'
-import './index.scss'
-
 
 const IndexPage = () => {
   const [currentView, setCurrentView] = useState(routes.home)

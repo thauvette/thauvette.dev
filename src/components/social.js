@@ -4,7 +4,7 @@ import {Twitter, GitHub, LinkedIn} from './icons'
 const socialLinks = [
     {title: 'twitter', url: 'https://twitter.com/TheDrumMatt', icon: Twitter},
     {title: 'github', url: 'https://github.com/thauvette', icon: GitHub},
-    {title: 'linkedIn', url: 'hhttps://www.linkedin.com/in/matt-thauvette/', icon: LinkedIn}
+    {title: 'linkedIn', url: 'https://www.linkedin.com/in/matt-thauvette/', icon: LinkedIn}
 ]
 
 
@@ -15,7 +15,9 @@ const Social = () => {
       <div className="social-links">
         {socialLinks.map(link => (
             <div key={link.url} className="social-link">
-                <link.icon width={32} />
+                <a href={link.url} rel="noopener noreferrer" target="_blank">
+                  <link.icon width={32} />
+                </a>
             </div>
         ))}
     </div>
