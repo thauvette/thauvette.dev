@@ -1,33 +1,32 @@
 @import '../styles/config';
 
 .menu {
-    display: flex;
-    padding: gridMultiplier(6) 0 gridMultiplier(4);
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  display: flex;
+  padding: gridMultiplier(6) gridMultiplier(1) gridMultiplier(4);
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
 
-    .menu-link {
-        appearance: none;
-        border: 1px solid $white;
-        background-color: transparent;
-        cursor: pointer;
-        color: $white;
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: $grid-unit gridMultiplier(3);
-        font-size: 0.8rem;
-        letter-spacing: 2px;;
-        
-        &:not(:first-child) {
-            border-left: none;
-        }
-
-        &:focus {
-            outline: none;
-            box-shadow: 0 0 0 4px rgba($accent, 0.8);
-        }
-    
+  .menu-link {
+    appearance: none;
+    border: 1px solid $white;
+    background-color: transparent;
+    cursor: pointer;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: $grid-unit gridMultiplier(3);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    flex: 1 1 0px;
+    white-space: nowrap;
+    text-align: center;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba($accent, 0.8);
     }
+  }
 }
-
