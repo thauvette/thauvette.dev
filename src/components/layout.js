@@ -4,11 +4,11 @@ import './layout.scss'
 import Menu from '../components/menu'
 import Social from '../components/social'
 import Card from './card'
-import SEO from './seo'
+import Seo from './seo'
 const Layout = ({ children, seoTitle, seoDescription }) => {
   return (
     <>
-      <SEO title={seoTitle} description={seoDescription} />
+      <Seo title={seoTitle} description={seoDescription} />
       <div id="main-content-container">
         <div className="main-content">
           <Menu />
