@@ -17,7 +17,7 @@
 .card {
   animation: 0.5s ease-in-out 0s 1 grow;
   width: 100%;
-  max-width: 520px;
+  max-width: 60ch;
   border: 1px solid $border-color;
 
   padding: calc(4 * #{$grid-unit}) 0;

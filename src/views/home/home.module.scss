@@ -1,0 +1,45 @@
+@import '../../styles/config';
+
+.homeContainer {
+  display: flex;
+  .profilePic {
+    position: relative;
+    // &:before,
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   top: 50%;
+    //   width: calc(50% - (#{gridMultiplier(16)} / 2) - #{gridMultiplier(2)});
+    //   height: 2px;
+    //   background-color: rgba($border-color, 0.87);
+    //   transform: translate(0, -50%);
+    // }
+    // &:before {
+    //   left: 0;
+    // }
+    // &:after {
+    //   right: 0;
+    // }
+    .imageContainer {
+      flex: 1 0 256px;
+      width: 256px;
+      margin: 0 auto;
+    }
+  }
+
+  .profileText {
+    flex: 1;
+    padding: gridMultiplier(4) gridMultiplier(2);
+
+    .title {
+      text-align: center;
+    }
+    .subTitle {
+      text-align: center;
+
+      margin-bottom: gridMultiplier(4);
+    }
+    .copy {
+    }
+  }
+}
