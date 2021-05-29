@@ -1,4 +1,4 @@
-export default {
+const routes = {
   home: {
     text: 'Matt',
     link: '/',
@@ -12,3 +12,5 @@ export default {
     link: '/contact',
   },
 }
+
+export default routes
