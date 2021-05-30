@@ -25,6 +25,17 @@ const IndexPage = () => (
         id="projects"
       >
         <p>Projects</p>
+        <p>Projects</p>
+        <p>Projects</p>
+        <p>Projects</p>
+        <p>Projects</p>
+        <p>Projects</p>
+        <p>Projects</p>
+        <p>Projects</p>
+        <p>Projects</p>
+        <p>Projects</p>
+        <p>Projects</p>
+        <p>Projects</p>
       </Section>
       <Section title="contact" id="contact">
         <FormProvider>

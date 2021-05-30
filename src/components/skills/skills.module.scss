@@ -1,1 +1,15 @@
 @import '../../styles/config';
+
+.Skills {
+  .Skill {
+    padding-bottom: 16px;
+    .Title {
+      font-size: 24px;
+      font-family: $font-heading;
+      text-transform: uppercase;
+    }
+    .Description {
+      padding-left: 32px;
+    }
+  }
+}

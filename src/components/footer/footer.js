@@ -9,7 +9,7 @@ const Footer = () => (
         <Social />
       </div>
       <div>
-        <p>Made with 😘 by Matt</p>
+        <p>Made with ♥ and Gatsby by Matt</p>
       </div>
       <div>
         <p>{new Date().getFullYear()} thauvette.dev</p>

@@ -8,7 +8,7 @@ body {
   color: $text-primary;
   font-size: 18px;
   line-height: 1.68;
-  font-family: 'Crimson Pro';
+  font-family: $font-body;
 }
 
 h1,
@@ -18,7 +18,7 @@ h4,
 h5,
 h6,
 .font-family-header {
-  font-family: 'Corben';
+  font-family: $font-heading;
 }
 
 // BUTTONS
