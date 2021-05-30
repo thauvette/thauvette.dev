@@ -37,9 +37,8 @@ const Menu = () => {
           })}
         </div>
         <button
-          role="button"
           className={`${styles.HamburgerButton}`}
-          aria-label="open menu"
+          aria-label="open mobile menu"
           onClick={toggleMobileMenu}
         >
           <div
