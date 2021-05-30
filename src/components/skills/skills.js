@@ -1,6 +1,7 @@
 import React from 'react'
 
 import * as styles from './skills.module.scss'
+import * as sharedStyles from '../../styles/shared/sectionLists.module.scss'
 
 const skillList = [
   {
@@ -46,9 +47,11 @@ const skillList = [
 const Skills = () => (
   <div className={styles.Skills}>
     {skillList.map(skill => (
-      <div className={styles.Skill} key={skill.title}>
-        <p className={styles.Title}>{skill.title}</p>
-        <p className={styles.Description}>{skill.description}</p>
+      <div className={`${styles.Skill} ${sharedStyles.Item}`} key={skill.title}>
+        <p className={sharedStyles.ItemTitle}>{skill.title}</p>
+        <div className={sharedStyles.ItemDescription}>
+          <p className={styles.DescriptionText}>{skill.description}</p>
+        </div>
       </div>
     ))}
   </div>
