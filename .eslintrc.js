@@ -12,5 +12,10 @@ module.exports = {
   extends: [
     'eslint:recommended', // use recommended configs
     'plugin:react/recommended',
+    'airbnb',
   ],
+  rules: {
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    semi: ['error', 'never'],
+  },
 }

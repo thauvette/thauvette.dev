@@ -29,9 +29,16 @@ const Contact = () => {
       <div className="contact">
         <h3>Sorry.</h3>
         <p>
-          Something went wrong. Please try to{' '}
-          <a href="mailto:matt@thauvette.dev">email me.</a> Or
-          <button onClick={resetFormSubmissionState} className="btn btn-hollow">
+          Something went wrong. Please try to
+          {' '}
+          <a href="mailto:matt@thauvette.dev">email me.</a>
+          {' '}
+          Or
+          <button
+            onClick={resetFormSubmissionState}
+            className="btn btn-hollow"
+            type="button"
+          >
             Try Again
           </button>
         </p>
@@ -43,10 +50,14 @@ const Contact = () => {
     <div className="contact">
       <h3>Get in touch</h3>
       <form onSubmit={submitForm} netlify netlify-honeypot="bot-field">
-        <div className={`input-container`}>
-          <label className={formValues.email.value.length ? 'has-value' : ''}>
+        <div className="input-container">
+          <label
+            className={formValues.email.value.length ? 'has-value' : ''}
+            htmlFor="email"
+          >
             <span>Your Email</span>
             <input
+              id="email"
               type="email"
               placeholder="Your Email"
               value={formValues.email.value}
@@ -57,10 +68,14 @@ const Contact = () => {
           </label>
           <span className="error">{formValues.email.error}</span>
         </div>
-        <div className={`input-container`}>
-          <label className={formValues.message.value.length ? 'has-value' : ''}>
+        <div className="input-container">
+          <label
+            className={formValues.message.value.length ? 'has-value' : ''}
+            htmlFor="message"
+          >
             <span>Message</span>
             <textarea
+              id="message"
               placeholder="Message"
               name="message"
               onChange={handleInputChange}
