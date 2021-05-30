@@ -54,24 +54,22 @@ const ProjectList = () => (
     {projects.map(project => (
       <div className={sharedStyles.Item} key={project.title}>
         <p className={sharedStyles.ItemTitle}>{project.title}</p>
-        <div className={sharedStyles.ItemDescription}>
+        <div>
           {project.team && (
             <div className={sharedStyles.ItemDetailsContainer}>
               <p className={sharedStyles.ItemDetailsLabel}>team:</p>
-              <p className={sharedStyles.ItemDetailsValue}>{project.team}</p>
+              <p>{project.team}</p>
             </div>
           )}
           {project.role && (
             <div className={sharedStyles.ItemDetailsContainer}>
               <p className={sharedStyles.ItemDetailsLabel}>role:</p>
-              <p className={sharedStyles.ItemDetailsValue}>{project.role}</p>
+              <p>{project.role}</p>
             </div>
           )}
           <div className={sharedStyles.ItemDetailsContainer}>
             <p className={sharedStyles.ItemDetailsLabel}>product:</p>
-            <p className={sharedStyles.ItemDetailsValue}>
-              {project.description}
-            </p>
+            <p>{project.description}</p>
           </div>
         </div>
       </div>

@@ -4,7 +4,14 @@ import { ArrowRight } from '../icons'
 
 import * as styles from './section.module.scss'
 
-const Section = ({ btnText, children, id, targetPage, title }) => (
+const Section = ({
+  btnText,
+  children,
+  id,
+  leftChildren,
+  targetPage,
+  title,
+}) => (
   <div className={styles.SectionContainer} id={id}>
     <div className={styles.SectionLeft}>
       <div className={styles.LeftContent}>
@@ -19,6 +26,7 @@ const Section = ({ btnText, children, id, targetPage, title }) => (
             <ArrowRight />
           </button>
         )}
+        {leftChildren && leftChildren}
       </div>
     </div>
     <div className={styles.SectionRight}>{children}</div>
@@ -27,6 +35,7 @@ const Section = ({ btnText, children, id, targetPage, title }) => (
 
 Section.defaultProps = {
   btnText: null,
+  leftChildren: null,
   targetPage: null,
 }
 
@@ -34,6 +43,7 @@ Section.propTypes = {
   btnText: PropTypes.string,
   children: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired,
+  leftChildren: PropTypes.node,
   targetPage: PropTypes.string,
   title: PropTypes.string.isRequired,
 }

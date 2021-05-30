@@ -21,22 +21,29 @@ h6,
   font-family: $font-heading;
 }
 
-// BUTTONS
-
 // FORMS AND INPUTS
 input,
 textarea {
   border: 1px solid $light-grey;
   border-radius: 4px;
   padding: gridMultiplier(1);
-  background-color: #fff;
+  background-color: $green;
+  border-color: $green;
+  padding: 0;
+  transition: all 0.33s ease;
+  padding-left: gridMultiplier(1);
   ::placeholder {
-    opacity: 0.75;
+    opacity: 0.89;
+    color: $dark;
   }
 }
-
+// LINKS & BUTTONS
 a {
   color: $text-primary;
+}
+a,
+button {
+  cursor: pointer;
 }
 
 a.btn,

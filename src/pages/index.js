@@ -16,6 +16,7 @@ const IndexPage = () => (
         // btnText="view resume"
         // targetPage="/resume"
         id="skills"
+        leftChildren={<p>Full resume coming soon.</p>}
       >
         <Skills />
       </Section>

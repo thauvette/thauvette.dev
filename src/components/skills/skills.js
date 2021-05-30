@@ -1,6 +1,5 @@
 import React from 'react'
 
-import * as styles from './skills.module.scss'
 import * as sharedStyles from '../../styles/shared/sectionLists.module.scss'
 
 const skillList = [
@@ -12,6 +11,10 @@ const skillList = [
     title: 'React + React Native',
     description:
       "I love building web and native apps using React and React Native. This is where I've probably logged the most hours in my career.",
+  },
+  {
+    title: 'Jest + React Testing Library',
+    description: "I'm a sucker for TDD.",
   },
   {
     title: 'Redux',
@@ -31,7 +34,7 @@ const skillList = [
   {
     title: 'HTML/CSS',
     description:
-      'And of course the JS versions and various solution, jsx, css in js, css modules, styled-components etc etc etc...',
+      'And of course the JS versions and various solution, jsx, css in js, css modules, styled-components, sass, etc etc etc...',
   },
   {
     title: 'UI/UX',
@@ -45,12 +48,12 @@ const skillList = [
 ]
 
 const Skills = () => (
-  <div className={styles.Skills}>
+  <div>
     {skillList.map(skill => (
-      <div className={`${styles.Skill} ${sharedStyles.Item}`} key={skill.title}>
+      <div className={`${sharedStyles.Item}`} key={skill.title}>
         <p className={sharedStyles.ItemTitle}>{skill.title}</p>
-        <div className={sharedStyles.ItemDescription}>
-          <p className={styles.DescriptionText}>{skill.description}</p>
+        <div>
+          <p>{skill.description}</p>
         </div>
       </div>
     ))}
