@@ -8,8 +8,8 @@ const Footer = () => (
       <div className={styles.FooterLeft}>
         <Social />
       </div>
-      <div className={styles.FooterCenter}></div>
-      <div className={styles.FooterRight}></div>
+      <div className={styles.FooterCenter} />
+      <div className={styles.FooterRight} />
     </div>
   </footer>
 )

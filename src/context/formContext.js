@@ -14,9 +14,10 @@ const initialState = {
 
 const FormContext = createContext(initialState)
 
-const encode = (data) => Object.keys(data)
-  .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-  .join('&')
+const encode = data =>
+  Object.keys(data)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&')
 
 function FormProvider({ children }) {
   const [formValues, setFormValues] = useState(initialState)
@@ -66,12 +67,16 @@ function FormProvider({ children }) {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({ 'form-name': 'Contact Form', ...values }),
       })
-        .then(() => setFormSubmissionState({ loading: false, error: null, success: true }))
-        .catch(() => setFormSubmissionState({
-          loading: false,
-          error: 'Could not submit',
-          success: false,
-        }))
+        .then(() =>
+          setFormSubmissionState({ loading: false, error: null, success: true })
+        )
+        .catch(() =>
+          setFormSubmissionState({
+            loading: false,
+            error: 'Could not submit',
+            success: false,
+          })
+        )
     }
   }
 
@@ -79,7 +84,7 @@ function FormProvider({ children }) {
     setFormSubmissionState({ loading: false, error: null, success: false })
   }
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     setFormValues({
       ...formValues,
       [e.target.name]: {
@@ -89,10 +94,12 @@ function FormProvider({ children }) {
     })
   }
 
-  const formIsComplete = () => Boolean(
-    Object.entries(formValues).every(([key, field]) => (key === 'honey-pot' ? true : field.value.length && !field.error)),
-  )
-
+  const formIsComplete = () =>
+    Boolean(
+      Object.entries(formValues).every(([key, field]) =>
+        key === 'honey-pot' ? true : field.value.length && !field.error
+      )
+    )
   return (
     <FormContext.Provider
       value={{

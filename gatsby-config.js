@@ -36,6 +36,7 @@ module.exports = {
         extensions: ['js', 'jsx'],
         exclude: ['node_modules', '.cache', 'public'],
         // Any eslint-webpack-plugin options below
+        emitWarning: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

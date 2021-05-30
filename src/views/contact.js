@@ -5,14 +5,14 @@ import './contact.scss'
 
 const Contact = () => {
   const {
-    formValues,
-    submitForm,
-    handleInputChange,
     formIsComplete,
+    formSubmissionState,
+    formValues,
+    handleInputChange,
+    resetFormSubmissionState,
+    submitForm,
     validateEmail,
     validateMessage,
-    formSubmissionState,
-    resetFormSubmissionState,
   } = useContext(FormContext)
 
   if (formSubmissionState.success) {
@@ -29,11 +29,8 @@ const Contact = () => {
       <div className="contact">
         <h3>Sorry.</h3>
         <p>
-          Something went wrong. Please try to
-          {' '}
-          <a href="mailto:matt@thauvette.dev">email me.</a>
-          {' '}
-          Or
+          Something went wrong. Please try to{' '}
+          <a href="mailto:matt@thauvette.dev">email me.</a> Or
           <button
             onClick={resetFormSubmissionState}
             className="btn btn-hollow"
@@ -48,8 +45,7 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <h3>Get in touch</h3>
-      <form onSubmit={submitForm} netlify netlify-honeypot="bot-field">
+      <form onSubmit={submitForm} netlify="true" netlify-honeypot="bot-field">
         <div className="input-container">
           <label
             className={formValues.email.value.length ? 'has-value' : ''}

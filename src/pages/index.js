@@ -3,6 +3,8 @@ import Layout from '../components/layout'
 import Home from '../views/home/home'
 import Skills from '../views/skills/skills'
 import Section from '../components/section/section'
+import Contact from '../views/contact'
+import { FormProvider } from '../context/formContext'
 
 const IndexPage = () => (
   <>
@@ -25,7 +27,9 @@ const IndexPage = () => (
         <p>Projects</p>
       </Section>
       <Section title="contact" id="contact">
-        <p>Form</p>
+        <FormProvider>
+          <Contact />
+        </FormProvider>
       </Section>
     </Layout>
   </>

@@ -22,24 +22,23 @@ const Menu = () => {
           <Link to="/">thauvette.dev</Link>
         </div>
         <div className={styles.MenuRight}>
-          {sectionLinks.map(link => {
-            return (
-              <a
-                key={link.target}
-                className={`${styles.MenuLink} ${
-                  link.withBorder ? styles.MenuLinkWithBorder : ''
-                }`}
-                href={`/${link.target}`}
-              >
-                {link.title}
-              </a>
-            )
-          })}
+          {sectionLinks.map(link => (
+            <a
+              key={link.target}
+              className={`${styles.MenuLink} ${
+                link.withBorder ? styles.MenuLinkWithBorder : ''
+              }`}
+              href={`/${link.target}`}
+            >
+              {link.title}
+            </a>
+          ))}
         </div>
         <button
           className={`${styles.HamburgerButton}`}
           aria-label="open mobile menu"
           onClick={toggleMobileMenu}
+          type="button"
         >
           <div
             className={`${styles.Hamburger} ${
