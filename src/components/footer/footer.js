@@ -5,11 +5,15 @@ import * as styles from './footer.module.scss'
 const Footer = () => (
   <footer className="content-container">
     <div className={styles.Footer}>
-      <div className={styles.FooterLeft}>
+      <div>
         <Social />
       </div>
-      <div className={styles.FooterCenter} />
-      <div className={styles.FooterRight} />
+      <div>
+        <p>Made with 😘 by Matt</p>
+      </div>
+      <div>
+        <p>{new Date().getFullYear()} thauvette.dev</p>
+      </div>
     </div>
   </footer>
 )

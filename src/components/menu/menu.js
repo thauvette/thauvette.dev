@@ -18,7 +18,7 @@ const Menu = () => {
   return (
     <div className="content-container">
       <div className={`${styles.Menu}`} role="navigation">
-        <div className={styles.MenuLeft}>
+        <div>
           <Link to="/">thauvette.dev</Link>
         </div>
         <div className={styles.MenuRight}>

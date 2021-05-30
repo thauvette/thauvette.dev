@@ -18,7 +18,7 @@ const Hero = () => (
       <p className={styles.subTitle}>JS + React + React Native Developer</p>
       <h1 className={styles.title}>Matt Thauvette</h1>
       <div className={styles.ctaContainer}>
-        <a className={`${styles.ctaLink} btn`} href="#contact">
+        <a className="btn" href="#contact">
           <p>Get in Touch</p>
           <ArrowRight />
         </a>
