@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { FormContext } from '../context/formContext'
+import { FormContext } from '../../context/formContext'
 
 import './contact.scss'
 

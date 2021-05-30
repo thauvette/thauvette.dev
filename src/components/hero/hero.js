@@ -1,10 +1,10 @@
 import React from 'react'
-import ProfileImage from '../../components/profileImage'
+import ProfileImage from '../profileImage'
 
-import { ArrowRight } from '../../components/icons'
-import * as styles from './home.module.scss'
+import { ArrowRight } from '../icons'
+import * as styles from './hero.module.scss'
 
-const Home = () => (
+const Hero = () => (
   <div className={styles.homeContainer}>
     <div className={styles.pictureColumn}>
       <div className={styles?.profilePic}>
@@ -27,4 +27,4 @@ const Home = () => (
   </div>
 )
 
-export default Home
+export default Hero

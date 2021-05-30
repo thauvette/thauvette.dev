@@ -1,15 +1,15 @@
 import React from 'react'
+import Contact from '../components/contact/contact'
+import Hero from '../components/hero/hero'
 import Layout from '../components/layout'
-import Home from '../views/home/home'
-import Skills from '../views/skills/skills'
 import Section from '../components/section/section'
-import Contact from '../views/contact'
+import Skills from '../components/skills/skills'
 import { FormProvider } from '../context/formContext'
 
 const IndexPage = () => (
   <>
     <Layout seoTitle="Welcome" seoDescription="I'm Matt, a JS developer.">
-      <Home />
+      <Hero />
       <Section
         title="skill set"
         btnText="view resume"

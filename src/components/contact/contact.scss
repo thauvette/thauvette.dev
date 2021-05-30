@@ -1,0 +1,57 @@
+@import '../../styles/config';
+
+.contact {
+  padding: 0 gridMultiplier(4);
+}
+
+.input-container {
+  padding: gridMultiplier(1) 0;
+  label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    span {
+      position: absolute;
+      padding-left: gridMultiplier(1);
+      top: gridMultiplier(1);
+      transition: all 0.33s ease;
+      opacity: 0;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    input,
+    textarea {
+      padding: 0;
+      transition: all 0.33s ease;
+      padding-left: gridMultiplier(1);
+    }
+    input {
+      height: gridMultiplier(6);
+    }
+    textarea {
+      padding-top: gridMultiplier(1);
+      min-height: gridMultiplier(10);
+    }
+    &.has-value {
+      span {
+        transform: translate(0);
+        opacity: 1;
+        top: 0;
+      }
+      input {
+        padding-top: 14px;
+      }
+      textarea {
+        padding-top: gridMultiplier(2);
+      }
+    }
+  }
+
+  .error {
+    color: red;
+    font-style: italic;
+    font-size: 0.87rem;
+  }
+}
