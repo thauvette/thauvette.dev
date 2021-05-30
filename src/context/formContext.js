@@ -1,4 +1,6 @@
 import React, { createContext, useState } from 'react'
+import PropTypes from 'prop-types'
+
 const initialState = {
   email: {
     value: '',
@@ -43,7 +45,7 @@ function FormProvider({ children }) {
         .then(() =>
           setFormSubmissionState({ loading: false, error: null, success: true })
         )
-        .catch(error =>
+        .catch(() =>
           setFormSubmissionState({
             loading: false,
             error: 'Could not submit',
@@ -117,6 +119,10 @@ function FormProvider({ children }) {
       {children}
     </FormContext.Provider>
   )
+}
+
+FormProvider.propTypes = {
+  children: PropTypes.element,
 }
 
 export { FormContext, FormProvider }

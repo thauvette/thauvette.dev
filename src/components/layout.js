@@ -1,6 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 import './layout.scss'
+import PropTypes from 'prop-types'
 import Menu from './menu/menu'
 import Footer from './footer/footer'
 import Seo from './seo'
@@ -21,6 +22,8 @@ const Layout = ({ children, seoTitle, seoDescription }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  seoTitle: PropTypes.string.isRequired,
+  seoDescription: PropTypes.string.isRequired,
 }
 
 export default Layout

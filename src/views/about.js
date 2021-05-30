@@ -6,7 +6,7 @@ import './about.scss'
 const About = () => {
   return (
     <div className="about-page">
-      <h3>Hi I'm Matt,</h3>
+      <h3>Hi I&aposm Matt,</h3>
       <p>
         a developer working in Halifax, NS. My main focus is building web and
         native apps with javascript, React, React Native and Node.
