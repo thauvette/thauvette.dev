@@ -1,45 +1,108 @@
 @import '../../styles/config';
 
 .homeContainer {
+  padding: gridMultiplier(12) 0;
   display: flex;
-  .profilePic {
-    position: relative;
-    // &:before,
-    // &:after {
-    //   content: '';
-    //   position: absolute;
-    //   top: 50%;
-    //   width: calc(50% - (#{gridMultiplier(16)} / 2) - #{gridMultiplier(2)});
-    //   height: 2px;
-    //   background-color: rgba($border-color, 0.87);
-    //   transform: translate(0, -50%);
-    // }
-    // &:before {
-    //   left: 0;
-    // }
-    // &:after {
-    //   right: 0;
-    // }
-    .imageContainer {
-      flex: 1 0 256px;
-      width: 256px;
-      margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  @include MQ(md) {
+    flex-direction: row;
+  }
+
+  .pictureColumn {
+    flex: 1 0;
+    padding-bottom: 64px;
+    width: 100%;
+    @include MQ(md) {
+      padding-bottom: 0;
+      width: auto;
+    }
+    .profilePic {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      @include MQ(md) {
+        padding-right: 64px;
+        justify-content: flex-start;
+      }
+      .imageContainer {
+        position: relative;
+        width: 100%;
+        max-width: 493px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          right: 50%;
+          width: 115px;
+          height: 122px;
+          background-image: url(../../icons/react-doodle.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          transform: translate(50%, -50%);
+          @include MQ(md) {
+            right: 0;
+            top: 0;
+          }
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba($green, 0.42);
+        }
+      }
     }
   }
 
   .profileText {
-    flex: 1;
-    padding: gridMultiplier(4) gridMultiplier(2);
+    flex: 1 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include MQ(md) {
+      padding: 0;
+    }
 
     .title {
-      text-align: center;
+      font-size: 56px;
+      @include MQ(md) {
+        font-size: 72px;
+      }
+      @include MQ(lg) {
+        font-size: 80px;
+      }
+      @include MQ(xl) {
+        font-size: 108px;
+      }
     }
     .subTitle {
-      text-align: center;
-
-      margin-bottom: gridMultiplier(4);
+      margin-bottom: 0;
+      font-size: 24px;
+      text-transform: uppercase;
     }
-    .copy {
+    .ctaContainer {
+      display: flex;
+      padding-top: 24px;
+      .ctaLink {
+        // background-color: $text-primary;
+        // color: $dark;
+        // padding: 8px 24px;
+        // display: flex;
+        // align-items: center;
+        // text-decoration: none;
+
+        // svg {
+        //   margin-left: 8px;
+        // }
+      }
     }
   }
 }

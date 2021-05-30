@@ -1,0 +1,15 @@
+@import '../../styles/config';
+
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: $border-light;
+  padding: 32px 0;
+
+  .FooterLeft {
+  }
+  .FooterCenter {
+  }
+  .FooterRight {
+  }
+}

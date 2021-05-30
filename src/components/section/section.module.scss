@@ -1,0 +1,27 @@
+@import '../../styles/config';
+.SectionContainer {
+  display: flex;
+  flex-direction: column;
+  border-top: $border-light;
+  padding: 64px 0;
+  @include MQ(md) {
+    flex-direction: row;
+  }
+
+  .SectionLeft,
+  .SectionRight {
+    flex: 1 0;
+  }
+
+  .SectionLeft {
+    .LeftContent {
+      @include MQ(md) {
+        padding-right: 64px;
+      }
+
+      .SectionTitle {
+        font-size: 48px;
+      }
+    }
+  }
+}

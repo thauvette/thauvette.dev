@@ -1,0 +1,83 @@
+@import '../../styles/config';
+
+.Menu {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: $border-light;
+  padding: 16px 0;
+  position: relative;
+  @include MQ(md) {
+    padding: 32px 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .MenuRight {
+    display: none;
+    @include MQ(md) {
+      display: block;
+    }
+
+    .MenuLink {
+      padding: 0 16px;
+
+      &.MenuLinkWithBorder {
+        border: $border;
+        padding: 8px 16px;
+      }
+    }
+  }
+  .HamburgerButton {
+    @include MQ(md) {
+      display: none;
+    }
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+    .Hamburger {
+      width: 32px;
+      height: 20px;
+      position: relative;
+
+      .Bar {
+        width: 32px;
+        height: 4px;
+        background-color: $green;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.33s ease;
+        transform-origin: center;
+        transition-delay: 0.1s;
+        &:nth-child(2) {
+          top: 8px;
+        }
+        &:last-child {
+          top: 16px;
+        }
+      }
+
+      &.HamburgerActive {
+        .Bar {
+          background-color: $dark;
+          &:first-child {
+            transform: rotate(45deg);
+            top: 8px;
+          }
+          &:nth-child(2) {
+            left: 50%;
+            width: 0;
+            // height: 0;
+          }
+          &:last-child {
+            transform: rotate(-45deg);
+            top: 8px;
+          }
+        }
+      }
+    }
+  }
+}

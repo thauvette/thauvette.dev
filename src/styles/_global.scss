@@ -1,44 +1,65 @@
 @import './variables';
+@import './mixins';
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-    color: $dark-primary;
+  color: $text-primary;
+  font-size: 18px;
+  line-height: 1.68;
+  font-family: 'Crimson Pro';
 }
 
-// BUTTONS 
-button, .btn {
-    appearance: none;
-    background-color: transparent;
-    border: 1px solid $dark-primary;
-    cursor: pointer;
-    
-    &.btn-primary {
-        background-color: $dark-primary;
-        color: $white;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        padding: gridMultiplier(1) gridMultiplier(4);
-
-        &:disabled {
-            opacity: 0.5;
-        }
-    }
-
-    &.btn-hollow {
-        border: none;
-        padding: 0;
-        color: $accent;
-    }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-family-header {
+  font-family: 'Corben';
 }
+
+// BUTTONS
 
 // FORMS AND INPUTS
-input, textarea {
-    border: 1px solid $light-grey;
-    border-radius: 4px;
-    padding: gridMultiplier(1);
-    background-color: #fff;
-    ::placeholder {
-        opacity: 0.75;
-    }
+input,
+textarea {
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  padding: gridMultiplier(1);
+  background-color: #fff;
+  ::placeholder {
+    opacity: 0.75;
+  }
+}
 
+a {
+  color: $text-primary;
+}
+
+a.btn,
+button {
+  border: none;
+  background-color: #93ab95;
+  color: #191b1a;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  svg {
+    margin-left: 8px;
+  }
+}
+
+.content-container {
+  width: 100%;
+  max-width: 1184px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1200px) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }

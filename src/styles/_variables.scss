@@ -5,7 +5,11 @@ $light-grey: #dee7e7;
 $accent: #a47985;
 $light-primary: #bebcd3;
 $dark-primary: #2d3047;
-$border-color: $light-grey;
+
+$green: #93ab95;
+$dark: #191b1a;
+$border-color: $green;
+$text-primary: $green;
 
 // LAYOUT
 $grid-unit: 8px;
@@ -13,3 +17,9 @@ $grid-unit: 8px;
 // BREAKPOINTS
 $bp-min-sm: 'min-width: 375px';
 $bp-min-md: 'min-width: 768px';
+$bp-min-lg: 'min-width: 1024px';
+$bp-min-xl: 'min-width: 1200px';
+
+// BORDERS
+$border: 1px solid $border-color;
+$border-light: 1px solid rgba($border-color, 0.18);

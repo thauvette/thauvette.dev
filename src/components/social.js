@@ -1,8 +1,7 @@
 import React from 'react'
 import './social.scss'
-import { Twitter, GitHub, LinkedIn } from './icons'
+import { GitHub, LinkedIn } from './icons'
 const socialLinks = [
-  { title: 'twitter', url: 'https://twitter.com/TheDrumMatt', icon: Twitter },
   { title: 'github', url: 'https://github.com/thauvette', icon: GitHub },
   {
     title: 'linkedIn',
@@ -17,7 +16,7 @@ const Social = () => {
       {socialLinks.map(link => (
         <div key={link.url} className="social-link">
           <a href={link.url} rel="noopener noreferrer" target="_blank">
-            <link.icon width={32} />
+            <link.icon width={24} />
           </a>
         </div>
       ))}
