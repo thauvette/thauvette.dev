@@ -24,17 +24,16 @@ h6,
 // FORMS AND INPUTS
 input,
 textarea {
-  border: 1px solid $light-grey;
-  border-radius: 4px;
+  border: 1px solid $grey;
   padding: gridMultiplier(1);
-  background-color: $green;
-  border-color: $green;
+  background-color: transparent;
   padding: 0;
   transition: all 0.33s ease;
   padding-left: gridMultiplier(1);
+  color: $green;
   ::placeholder {
-    opacity: 0.89;
-    color: $dark;
+    opacity: 0.38;
+    color: $green;
   }
 }
 // LINKS & BUTTONS
