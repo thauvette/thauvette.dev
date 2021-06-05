@@ -11,7 +11,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -25,13 +25,18 @@ module.exports = {
         background_color: `#2d3047`,
         theme_color: `#2d3047`,
         display: `minimal-ui`,
-        icon: `src/icons/logo.png`, // This path is relative to the root of the site.
+        icon: `src/assets/icons/logo.png`, // This path is relative to the root of the site.
       },
     },
+    // https://www.gatsbyjs.com/plugins/gatsby-plugin-eslint/
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-eslint',
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        stages: ['develop'],
+        extensions: ['js', 'jsx'],
+        exclude: ['node_modules', '.cache', 'public'],
+        // Any eslint-webpack-plugin options below
+        emitWarning: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

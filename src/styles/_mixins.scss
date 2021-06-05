@@ -1,10 +1,18 @@
 @import './variables';
-// Media Queries 
+// Media Queries
 
 @mixin MQ($canvas) {
-    @if $canvas = md {
-        @media screen and ($bp-min-md) {
-            @content
-        }
+  @if $canvas == md {
+    @media screen and ($bp-min-md) {
+      @content;
     }
+  } @else if $canvas == lg {
+    @media screen and ($bp-min-lg) {
+      @content;
+    }
+  } @else if $canvas == xl {
+    @media screen and ($bp-min-xl) {
+      @content;
+    }
+  }
 }

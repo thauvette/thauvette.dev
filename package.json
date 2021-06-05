@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@fontsource/corben": "^4.4.1",
+    "@fontsource/crimson-pro": "^4.4.1",
     "gatsby": "^3.6.1",
     "gatsby-image": "^3.6.0",
     "gatsby-plugin-manifest": "^3.6.0",
@@ -25,6 +27,17 @@
     "typography-theme-funston": "^0.16.19"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-webpack-plugin": "^2.5.4",
+    "gatsby-plugin-eslint": "^3.0.0",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -33,12 +46,13 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "echo \"linting\" && eslint --fix src/**/*.js"
   },
   "repository": {
     "type": "git",

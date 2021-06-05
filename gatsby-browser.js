@@ -5,3 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+import '@fontsource/crimson-pro' // Defaults to weight 400.
+// font-family: "Crimson Pro";
+import '@fontsource/corben' // Defaults to weight 400.
+//  font-family: "Corben";
