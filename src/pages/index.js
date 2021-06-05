@@ -28,7 +28,16 @@ const IndexPage = () => (
       >
         <ProjectList />
       </Section>
-      <Section title="contact" id="contact">
+      <Section
+        title="contact"
+        id="contact"
+        leftChildren={
+          <p>
+            I&apos;m always up for something new. <br /> Want to work together?
+            Drop me a line.
+          </p>
+        }
+      >
         <FormProvider>
           <Contact />
         </FormProvider>

@@ -8,9 +8,9 @@ const skillList = [
     description: 'I consider myself first and foremost a JS dev.',
   },
   {
-    title: 'React + React Native',
+    title: 'React + React Native + Preact',
     description:
-      "I love building web and native apps using React and React Native. This is where I've probably logged the most hours in my career.",
+      "I love building web and native apps using React, React Native and Preact. This is where I've logged the most hours in my career.",
   },
   {
     title: 'Jest + React Testing Library',
@@ -19,7 +19,7 @@ const skillList = [
   {
     title: 'Redux',
     description:
-      'While I love the built in state management available with React, I have spent a lot of time working with and learning redux. I still reach for it on large, data or business-logic heavy builds.',
+      'While I love the built in state management available with React, I have spent a lot of time working with and learning redux. I still reach for it on data or business-logic heavy builds.',
   },
   {
     title: 'Gatsby / Next.js',
@@ -40,8 +40,8 @@ const skillList = [
     title: 'UI/UX',
     description: (
       <>
-        Admittedly <strong>NOT</strong> my forte but I have a good understanding
-        of the core concepts and best practices.
+        Admittedly <strong>NOT</strong> my forte, but I have a good
+        understanding of the core concepts and best practices.
       </>
     ),
   },
