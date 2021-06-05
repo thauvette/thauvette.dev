@@ -1,4 +1,6 @@
 import React, { createContext, useState } from 'react'
+import PropTypes from 'prop-types'
+
 const initialState = {
   email: {
     value: '',
@@ -12,11 +14,10 @@ const initialState = {
 
 const FormContext = createContext(initialState)
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+const encode = data =>
+  Object.keys(data)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&')
-}
 
 function FormProvider({ children }) {
   const [formValues, setFormValues] = useState(initialState)
@@ -25,6 +26,32 @@ function FormProvider({ children }) {
     error: null,
     success: false,
   })
+
+  function validateEmail() {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formValues.email.value)) {
+      setFormValues({
+        ...formValues,
+        email: {
+          ...formValues.email,
+          error: "That email doesn't look quite right?",
+        },
+      })
+    }
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formValues.email.value)
+  }
+
+  function validateMessage() {
+    if (formValues.message.value.length < 10) {
+      setFormValues({
+        ...formValues,
+        message: {
+          ...formValues.message,
+          error: 'Is that all you have to say?',
+        },
+      })
+    }
+    return Boolean(formValues.message.value.length >= 10)
+  }
 
   function submitForm(e) {
     e.preventDefault()
@@ -43,7 +70,7 @@ function FormProvider({ children }) {
         .then(() =>
           setFormSubmissionState({ loading: false, error: null, success: true })
         )
-        .catch(error =>
+        .catch(() =>
           setFormSubmissionState({
             loading: false,
             error: 'Could not submit',
@@ -67,40 +94,12 @@ function FormProvider({ children }) {
     })
   }
 
-  const formIsComplete = () => {
-    return Boolean(
-      Object.entries(formValues).every(([key, field]) => {
-        return key === 'honey-pot' ? true : field.value.length && !field.error
-      })
+  const formIsComplete = () =>
+    Boolean(
+      Object.entries(formValues).every(([key, field]) =>
+        key === 'honey-pot' ? true : field.value.length && !field.error
+      )
     )
-  }
-
-  const validateEmail = () => {
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formValues.email.value)) {
-      setFormValues({
-        ...formValues,
-        email: {
-          ...formValues.email,
-          error: "That email doesn't look quite right?",
-        },
-      })
-    }
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formValues.email.value)
-  }
-
-  const validateMessage = () => {
-    if (formValues.message.value.length < 10) {
-      setFormValues({
-        ...formValues,
-        message: {
-          ...formValues.message,
-          error: 'Is that all you have to say?',
-        },
-      })
-    }
-    return Boolean(formValues.message.value.length >= 10)
-  }
-
   return (
     <FormContext.Provider
       value={{
@@ -117,6 +116,10 @@ function FormProvider({ children }) {
       {children}
     </FormContext.Provider>
   )
+}
+
+FormProvider.propTypes = {
+  children: PropTypes.element.isRequired,
 }
 
 export { FormContext, FormProvider }

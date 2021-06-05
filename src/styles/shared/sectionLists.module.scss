@@ -1,0 +1,22 @@
+@import '../config';
+
+.Item {
+  padding: 16px 0;
+  &:not(:last-child) {
+    border-bottom: $border-light;
+  }
+  .ItemTitle {
+    font-size: 24px;
+    font-family: $font-heading;
+    text-transform: uppercase;
+  }
+
+  .ItemDetailsContainer {
+    display: flex;
+    padding-bottom: 8px;
+    .ItemDetailsLabel {
+      margin-right: 8px;
+      min-width: 100px;
+    }
+  }
+}

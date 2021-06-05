@@ -1,17 +1,16 @@
-
 @import '../styles/config';
 
 .social-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: gridMultiplier(4) 0 gridMultiplier(6);
-    .social-link {
-        margin: 0 $grid-unit;
-        color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-        svg {
-            fill: $off-white;
-        }
+  .social-link {
+    margin: 0 $grid-unit;
+    color: #fff;
+
+    svg {
+      fill: $text-primary;
     }
+  }
 }
