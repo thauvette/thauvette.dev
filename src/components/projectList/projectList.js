@@ -3,8 +3,29 @@ import React from 'react'
 import * as sharedStyles from '../../styles/shared/sectionLists.module.scss'
 
 // const tags = ['solo', 'react', 'react native']
-
+// todo: update team to take array
+// todo: add links
 const projects = [
+  {
+    title: 'Financial Calculator Embeds',
+    description:
+      'Embedded widgets built with preact and d3 for use by financial advisors',
+    role: 'widget guy',
+    tools: ['preact', 'd3', 'yup'],
+    tags: ['react', 'preact', 'widget'],
+    team: (
+      <>
+        <a
+          href="https://mikesux.design/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          mikesux.design
+        </a>
+      </>
+    ),
+    links: ['https://www.gordonstirrett.com/calculators/investment-calculator'],
+  },
   {
     title: 'IWNDT',
     description:
@@ -29,6 +50,10 @@ const projects = [
     role: 'Front-end technical lead & lead developer',
     tools: ['React', 'Redux'],
     tags: ['VERB', 'react'],
+    links: [
+      { title: 'CTMA', url: 'https://reservation.ctma.ca/book/' },
+      { title: 'ferries.ca', url: 'https://www.ferries.ca/book' },
+    ],
   },
   {
     title: 'Voyages, Ayers Rock Resort',
@@ -46,6 +71,7 @@ const projects = [
     role: 'Front-end technical lead & lead developer',
     tools: ['React', 'Redux'],
     tags: ['VERB', 'react'],
+    links: ['https://www.ayersrockresort.com.au/book'],
   },
 ]
 
