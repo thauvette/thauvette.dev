@@ -31,6 +31,32 @@ const projects = [
     ],
   },
   {
+    title: 'Maximum Overdrive Site',
+    description: `Fun, simple landing page for the 80's tribute band Maximum Overdrive`,
+    role: 'Solo design and development',
+    tools: ['gatsby', 'netlify', 'netlifyCMS'],
+    tags: ['react', 'gatsby', 'CMS'],
+    links: [
+      {
+        title: 'Maximum Overdrive',
+        url: 'https://maximumoverdrive80s.com/',
+      },
+    ],
+  },
+  {
+    title: 'Strength Tracker',
+    description: `PWA for tracking strength training and creating Wendler 531 programs. A personal project that is very niche and very much a work in progress.`,
+    role: 'Solo design and development',
+    tools: ['preact', 'indexedDB'],
+    tags: ['preact', 'indexedDB'],
+    links: [
+      {
+        title: 'Strength Tracker',
+        url: 'https://pedantic-blackwell-ce225b.netlify.app/',
+      },
+    ],
+  },
+  {
     title: 'IWNDT',
     description:
       'r/stopdrinking inspired, feature rich, customizable sobriety tracking native App, including milestones, diary, stats, and more.',
