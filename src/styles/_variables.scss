@@ -1,10 +1,10 @@
 // COLORS
 $grey: #c4c4c4;
 $green: #93ab95;
-$dark: #191b1a;
-$border-color: $green;
-$text-primary: $green;
-
+$dark: #070f1c;
+$border-color: #fff;
+$text-primary: #e7e7e7;
+$text-heading: #ffedec;
 // FONTS
 $font-heading: 'Corben';
 $font-body: 'Crimson Pro';
@@ -20,5 +20,5 @@ $bp-min-xl: 'min-width: 1200px';
 
 // BORDERS
 $border: 1px solid $border-color;
-$border-light: 1px solid rgba($border-color, 0.18);
+$border-light: 1px solid rgba($border-color, 0.33);
 $border-grey: 1px solid $grey;

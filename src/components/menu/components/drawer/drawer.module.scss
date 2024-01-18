@@ -10,7 +10,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $green;
+  background-color: $dark;
   z-index: 1;
   transform: translateY(-100%);
   visibility: hidden;
@@ -28,10 +28,10 @@
     align-items: center;
     justify-content: center;
 
-    color: $dark;
+    color: $text-primary;
 
     a {
-      color: $dark;
+      color: $text-primary;
       font-size: 32px;
       text-transform: capitalize;
       margin: 8px 0;

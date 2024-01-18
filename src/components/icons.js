@@ -43,14 +43,14 @@ export const ArrowRight = () => (
     <path d="M0 0H20V20H0V0Z" fill="white" fillOpacity="0.01" />
     <path
       d="M17.5 10H2.5"
-      stroke="#191B1A"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M12.5 5L17.5 10L12.5 15"
-      stroke="#191B1A"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -68,7 +68,7 @@ export const MailIcon = () => (
   >
     <path
       d="M18 0H2C0.895 0 0.00999999 0.895 0.00999999 2L0 14C0 15.105 0.895 16 2 16H18C19.105 16 20 15.105 20 14V2C20 0.895 19.105 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"
-      fill="#93AB95"
+      fill="currentColor"
     />
   </svg>
 )

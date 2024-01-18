@@ -6,7 +6,7 @@ import MobileMenuDrawer from './components/drawer/mobileMenuDrawer'
 const sectionLinks = [
   { title: 'projects', target: '#projects' },
   { title: 'resume', target: '#skills' },
-  { title: 'contact', target: '#contact', withBorder: true },
+  // { title: 'contact', target: '#contact', withBorder: true },
 ]
 
 const Menu = () => {

@@ -46,7 +46,7 @@
       .Bar {
         width: 32px;
         height: 4px;
-        background-color: $green;
+        background-color: $text-primary;
         position: absolute;
         left: 0;
         top: 0;
@@ -63,7 +63,7 @@
 
       &.HamburgerActive {
         .Bar {
-          background-color: $dark;
+          background-color: $text-primary;
           &:first-child {
             transform: rotate(45deg);
             top: 8px;

@@ -1,10 +1,12 @@
 import React from 'react'
-
-import './layout.scss'
 import PropTypes from 'prop-types'
+
 import Menu from './menu/menu'
 import Footer from './footer/footer'
 import Seo from './seo'
+
+import './layout.scss'
+import Background from './background/background'
 
 const Layout = ({ children, seoTitle, seoDescription }) => (
   <>
@@ -13,8 +15,8 @@ const Layout = ({ children, seoTitle, seoDescription }) => (
       <Menu />
     </header>
     <div className="main-content content-container">{children}</div>
-
     <Footer />
+    <Background />
   </>
 )
 
