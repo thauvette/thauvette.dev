@@ -10,16 +10,16 @@ const IndexPage = () => (
     <Layout seoTitle="Welcome" seoDescription="I'm Matt, a JS developer.">
       <Hero />
       <Section
-        title="skill set"
+        title="Skills"
         // btnText="view resume"
         // targetPage="/resume"
         id="skills"
-        leftChildren={<p>Full resume coming soon.</p>}
+        // leftChildren={<p>Full resume coming soon.</p>}
       >
         <Skills />
       </Section>
       <Section
-        title="projects"
+        title="Projects"
         // btnText="view all projects"
         // targetPage="/projects"
         id="projects"

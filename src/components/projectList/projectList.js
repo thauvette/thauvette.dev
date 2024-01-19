@@ -2,7 +2,6 @@ import React from 'react'
 
 import * as sharedStyles from '../../styles/shared/sectionLists.module.scss'
 
-// const tags = ['solo', 'react', 'react native']
 // todo: update team to take array
 const projects = [
   {
@@ -11,7 +10,6 @@ const projects = [
       'Embedded widgets built with preact and d3 for use by financial advisors',
     role: 'widget guy',
     tools: ['preact', 'd3', 'yup', 'css modules'],
-    tags: ['react', 'preact', 'widget'],
     team: (
       <>
         <a
@@ -35,7 +33,6 @@ const projects = [
     description: `Fun, simple landing page for the 80's tribute band Maximum Overdrive`,
     role: 'Solo design and development',
     tools: ['gatsby', 'netlify', 'netlifyCMS'],
-    tags: ['react', 'gatsby', 'CMS'],
     links: [
       {
         title: 'Maximum Overdrive',
@@ -47,8 +44,7 @@ const projects = [
     title: 'Strength Tracker',
     description: `PWA for tracking strength training and creating Wendler 531 programs. A personal project that is very niche and very much a work in progress.`,
     role: 'Solo design and development',
-    tools: ['preact', 'indexedDB'],
-    tags: ['preact', 'indexedDB'],
+    tools: ['preact', 'indexedDB', 'typescript', 'tailwind'],
     links: [
       {
         title: 'Strength Tracker',
@@ -62,7 +58,6 @@ const projects = [
       'r/stopdrinking inspired, feature rich, customizable sobriety tracking native App, including milestones, diary, stats, and more.',
     role: 'Solo design and development',
     tools: ['React Native', 'Redux', 'redux-persist', 'typescript'],
-    tags: ['solo', 'react native'],
   },
   {
     title: 'Ferry Booking Engine',
@@ -79,10 +74,10 @@ const projects = [
     ),
     role: 'Front-end technical lead & lead developer',
     tools: ['React', 'Redux'],
-    tags: ['VERB', 'react'],
     links: [
       { title: 'CTMA', url: 'https://reservation.ctma.ca/book/' },
       { title: 'ferries.ca', url: 'https://www.ferries.ca/book' },
+      { title: 'Marine Atlantic', url: 'https://book.marineatlantic.ca/book' },
     ],
   },
   {
@@ -99,7 +94,7 @@ const projects = [
       </a>
     ),
     role: 'Front-end technical lead & lead developer',
-    tools: ['React', 'Redux'],
+    tools: ['React', 'Redux', 'tailwind'],
     tags: ['VERB', 'react'],
     links: [
       {
@@ -152,7 +147,13 @@ const ProjectList = () => (
           {project.tools && (
             <div className={sharedStyles.ItemDetailsContainer}>
               <p className={sharedStyles.ItemDetailsLabel}>tools:</p>
-              <p>{project.tools.join(', ')}</p>
+              <div className={sharedStyles.PillList}>
+                {project.tools.map(tool => (
+                  <div key={tool} className={sharedStyles.Pill}>
+                    <p>{tool}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>

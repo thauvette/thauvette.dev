@@ -23,3 +23,16 @@
     }
   }
 }
+
+.PillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.Pill {
+  background-color: rgba($text-primary, 0.3);
+  padding: 4px 12px;
+  border-radius: 99px;
+  color: $text-heading;
+  font-size: 0.75rem;
+}

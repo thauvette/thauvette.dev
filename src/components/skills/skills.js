@@ -3,24 +3,37 @@ import React from 'react'
 import * as sharedStyles from '../../styles/shared/sectionLists.module.scss'
 
 const skillList = [
+  // {
+  //   title: 'Programing Languages',
+  //   description: 'Javascript, Typescript, HTML, CSS, Sass',
+  // },
+  // {
+  //   title: 'Libraries and Frameworks',
+  //   description: 'React, React Native, Node.js, Sequelize, Gatsby, Next,js, Tailwind',
+  // },
+  // {
+  //   title: 'Tools & Platforms',
+  //   description:
+  //     'Git, GitHub, GitLab, Netlify, Docker, Webpack, Vite, CAR, Figma',
+  // },
   {
-    title: 'JavaScript',
+    title: 'JavaScript / Typescript',
     description: 'I consider myself first and foremost a JS dev.',
   },
   {
-    title: 'React + React Native + Preact',
+    title: 'React / React Native / Preact',
     description:
       "I love building web and native apps using React, React Native and Preact. This is where I've logged the most hours in my career.",
   },
-  {
-    title: 'Jest + React Testing Library',
-    description: "I'm a sucker for TDD.",
-  },
-  {
-    title: 'Redux',
-    description:
-      'While I love the built in state management available with React, I have spent a lot of time working with and learning redux. I still reach for it on data or business-logic heavy builds.',
-  },
+  // {
+  //   title: 'Jest + React Testing Library',
+  //   description: "I'm a sucker for TDD.",
+  // },
+  // {
+  //   title: 'Redux',
+  //   description:
+  //     'While I love the built in state management available with React, I have spent a lot of time working with and learning redux. I still reach for it on data or business-logic heavy builds.',
+  // },
   {
     title: 'Gatsby / Next.js',
     description:
@@ -29,7 +42,7 @@ const skillList = [
   {
     title: 'Node',
     description:
-      'I love to tinker in node and various API solutions available for JavaScript, like serverless, express etc...',
+      'I love to tinker in node and various API solutions available for JavaScript.',
   },
   {
     title: 'HTML/CSS',

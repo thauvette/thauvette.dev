@@ -1,9 +1,9 @@
 @import '../../styles/config';
 
 .homeContainer {
-  padding: 4rem 0 6rem;
+  padding: 4rem 8px 6rem;
   display: flex;
-  gap: 4em;
+  gap: 2em;
   flex-direction: column;
   @include MQ(md) {
     flex-direction: row;
@@ -16,6 +16,7 @@
 
     @include MQ(md) {
       padding: 0;
+      flex: 33% 0;
     }
 
     .title {
