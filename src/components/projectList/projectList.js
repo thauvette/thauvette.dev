@@ -5,6 +5,52 @@ import * as sharedStyles from '../../styles/shared/sectionLists.module.scss'
 // todo: update team to take array
 const projects = [
   {
+    title: 'Voyages, Ayers Rock Resort',
+    description:
+      'A multiple step, multi product booking solution for a full vacation experience including accommodations, tours and spas.',
+    team: (
+      <a
+        target="_blank"
+        rel="noreferrer noopener"
+        href="https://verbinteractive.com"
+      >
+        VERB Interactive
+      </a>
+    ),
+    role: 'Front-end technical lead & lead developer',
+    tools: ['React', 'Redux', 'tailwind'],
+    tags: ['VERB', 'react'],
+    links: [
+      {
+        title: 'Ayers Rock Resort',
+        url: 'https://www.ayersrockresort.com.au/book',
+      },
+    ],
+  },
+  {
+    title: 'Red Funnel Booking and Account Management',
+    description:
+      'Comprehensive multi-product booking engine for Red Funnel ferries, attractions and accommodations, plus account and itinerary management tools.',
+    team: (
+      <a
+        target="_blank"
+        rel="noreferrer noopener"
+        href="https://verbinteractive.com"
+      >
+        VERB Interactive
+      </a>
+    ),
+    role: 'Front-end engineer / lead developer',
+    tools: ['React', 'Redux', 'tailwind'],
+    tags: ['VERB', 'react'],
+    links: [
+      {
+        title: 'Red Funnel',
+        url: 'https://www.redfunnel.co.uk/book',
+      },
+    ],
+  },
+  {
     title: 'Financial Calculator Embeds',
     description:
       'Embedded widgets built with preact and d3 for use by financial advisors',
@@ -78,29 +124,6 @@ const projects = [
       { title: 'CTMA', url: 'https://reservation.ctma.ca/book/' },
       { title: 'ferries.ca', url: 'https://www.ferries.ca/book' },
       { title: 'Marine Atlantic', url: 'https://book.marineatlantic.ca/book' },
-    ],
-  },
-  {
-    title: 'Voyages, Ayers Rock Resort',
-    description:
-      'A multiple step, multi product booking solution for a full vacation experience including accommodations, tours and spas.',
-    team: (
-      <a
-        target="_blank"
-        rel="noreferrer noopener"
-        href="https://verbinteractive.com"
-      >
-        VERB Interactive
-      </a>
-    ),
-    role: 'Front-end technical lead & lead developer',
-    tools: ['React', 'Redux', 'tailwind'],
-    tags: ['VERB', 'react'],
-    links: [
-      {
-        title: 'Ayers Rock Resort',
-        url: 'https://www.ayersrockresort.com.au/book',
-      },
     ],
   },
 ]
