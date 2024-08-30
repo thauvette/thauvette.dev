@@ -7,7 +7,7 @@
   "dependencies": {
     "@fontsource/corben": "^4.4.1",
     "@fontsource/crimson-pro": "^4.4.1",
-    "gatsby": "^3.6.1",
+    "gatsby": "^5.13.7",
     "gatsby-image": "^3.6.0",
     "gatsby-plugin-manifest": "^3.6.0",
     "gatsby-plugin-offline": "^4.6.0",
