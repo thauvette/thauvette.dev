@@ -11,8 +11,8 @@ const Hero = () => (
       <ul>
         <li>
           Frontend Engineer -{' '}
-          <a target="__blank" href="https://verbinteractive.com">
-            Verb Interactive
+          <a target="__blank" href="https://www.quickfactsinc.com/">
+            QuickFacts
           </a>
         </li>
         <li>Professional Musician</li>
