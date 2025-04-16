@@ -10,7 +10,7 @@ const Hero = () => (
       <h1 className={styles.title}>Matt Thauvette</h1>
       <ul>
         <li>
-          Frontend Engineer -{' '}
+          Senior Software Engineer -{' '}
           <a target="__blank" href="https://www.quickfactsinc.com/">
             QuickFacts
           </a>
